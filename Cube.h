@@ -24,6 +24,9 @@ namespace nsGameStruct {
 		void moveUp ();
 		/** move the cube down of 1 unit on the y axis **/
 		void moveDown ();
+
+		/** to inject cubes in ofstreams **/
+		friend operator << (std::ofstream os, const Cube & cube);
 	};
 }//Cube
 

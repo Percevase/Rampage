@@ -23,4 +23,12 @@ void Cube::moveUp() {
 
 void Cube::moveDown() {
 	--myPosition[1];
+}
+
+//doesn't work
+Cube::operator <<(ostream os) {
+	os << "x: " << this->getX()
+	   << " y: " << this->getY()
+	   << " z: " << this->getZ()
+	   << endl;
 }//moveDown

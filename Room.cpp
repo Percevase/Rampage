@@ -26,7 +26,7 @@ void Room::display() const {
 	for (CCubeMatrix matrix : myRoom){
 		for (CCubeLine line: matrix){
 			for (Cube cube : line){
-				cout << "x: " << cube.getX() << " y: " << cube.getY() << " z: " << cube.getZ() << endl;
+				cout << cube;
 			}
 		}
 	}
