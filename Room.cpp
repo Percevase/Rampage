@@ -4,6 +4,7 @@
 using namespace std;
 using namespace gameStruct;
 
+/** makes a cube of Cubes at the size given in parameters **/
 Room::Room(const unsigned & size /* = MIN_SIZE*/) {
 	for (int z (0); z < int (size) ; ++z){
 		CCubeMatrix myMatrix;
@@ -17,9 +18,10 @@ Room::Room(const unsigned & size /* = MIN_SIZE*/) {
 			}
 		}
 	}
-}
+}//Room
 
-void Room::display() const {
+/** display the position of every cube **/
+void Room::display() const { //doesn't work
 	for (CCubeMatrix matrix : myRoom){
 		for (CCubeLine line: matrix){
 			for (Cube cube : line){
@@ -27,8 +29,9 @@ void Room::display() const {
 			}
 		}
 	}
-}
+}//display
+
 
 bool Room::isMyRoomFilled() const {
 	return myRoom.size () > 0;
-}
+}//isMyRoomFilled

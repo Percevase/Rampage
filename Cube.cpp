@@ -17,10 +17,12 @@ int Cube::getZ() const {
 	return myPosition[2];
 }
 
+/** move the cube up of 1 unit on the y axis **/
 void Cube::moveUp() {
 	++myPosition[1];
 }//moveUp
 
+/** move the cube down of 1 unit on the y axis **/
 void Cube::moveDown() {
 	--myPosition[1];
 }//moveDown
