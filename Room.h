@@ -5,11 +5,11 @@
 #include "Cube.h"
 
 //typedef for easier comprehension
-typedef std::vector<gameStruct::Cube> CCubeLine;
+typedef std::vector<nsGameStruct::Cube> CCubeLine;
 typedef std::vector<CCubeLine> CCubeMatrix;
 typedef std::vector<CCubeMatrix> CCubeRoom; //dunno how to name a cube of cube x)
 
-namespace gameStruct {
+namespace nsGameStruct {
 
 	//not sure about the min size but i'll see it after tests
 	const unsigned MIN_SIZE = 9;

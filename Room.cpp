@@ -2,7 +2,7 @@
 #include "Room.h"
 
 using namespace std;
-using namespace gameStruct;
+using namespace nsGameStruct;
 
 /** makes a cube of Cubes at the size given in parameters **/
 Room::Room(const unsigned & size /* = MIN_SIZE*/) {
@@ -13,7 +13,7 @@ Room::Room(const unsigned & size /* = MIN_SIZE*/) {
 			CCubeLine myLine;
 			myMatrix.push_back (myLine);
 			for(int x (0); x < int (size); ++x){
-				Cube myCube ({x,y,z}, {""});
+				Cube myCube ({x,y,z});
 				myLine.push_back(myCube);
 			}
 		}

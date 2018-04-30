@@ -2,7 +2,7 @@
 #include "Room.h"
 
 using namespace std;
-using namespace gameStruct;
+using namespace nsGameStruct;
 
 int main()
 {

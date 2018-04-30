@@ -4,14 +4,13 @@
 #include <vector>
 #include <string>
 
-/** name filled with everything building the game world **/
-namespace gameStruct {
+/** namespace filled with everything building the game world **/
+namespace nsGameStruct {
 	class Cube {
 	std::vector<int> myPosition; //xyz
-	std::vector<std::string> myFaces; //links to the skin of a face
 	public:
 		/** builder **/
-		Cube(const std::vector<int> & positions, const std::vector<std::string> & faces);
+		Cube(const std::vector<int> & positions);
 		/** getters **/
 		int getX () const;
 		int getY () const;

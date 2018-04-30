@@ -1,9 +1,9 @@
 #include "Cube.h"
 
 using namespace std;
-using namespace gameStruct;
+using namespace nsGameStruct;
 
-Cube::Cube(const std::vector<int> &positions, const std::vector<string> &faces) : myPosition (positions), myFaces (faces) {}//Cube
+Cube::Cube(const std::vector<int> &positions) : myPosition (positions){}//Cube
 
 int Cube::getX() const {
 	return myPosition[0];
