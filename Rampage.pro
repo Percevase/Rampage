@@ -6,8 +6,10 @@ CONFIG -= qt
 SOURCES += \
         main.cpp \
     Cube.cpp \
-    Room.cpp
+    Room.cpp \
+    GameTools.cpp
 
 HEADERS += \
     Cube.h \
-    Room.h
+    Room.h \
+    GameTools.h

@@ -15,13 +15,20 @@ namespace nsGameStruct {
 	const unsigned MIN_SIZE = 9;
 
 	class Room {
+
 			CCubeRoom myRoom;
 			unsigned mySize; //in prevision of modification if there is more than 2 players
+
 		public:
+
 			/** builder **/
+			/** makes a cube of Cubes at the size given in parameters **/
 			Room(const unsigned & size = MIN_SIZE);
+
+			/** display the position of every cube in the room**/
 			void display () const;
-			/** filling control to debug **/
+
+			/** filling control : to debug **/
 			bool isMyRoomFilled () const;
 	};
 }//Room

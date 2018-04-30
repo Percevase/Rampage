@@ -1,10 +1,10 @@
 #include <iostream>
 #include "Room.h"
+#include "GameTools.h"
 
 using namespace std;
 using namespace nsGameStruct;
 
-/** makes a cube of Cubes at the size given in parameters **/
 Room::Room(const unsigned & size /* = MIN_SIZE*/) {
 	for (int z (0); z < int (size) ; ++z){
 		CCubeMatrix myMatrix;
@@ -14,14 +14,15 @@ Room::Room(const unsigned & size /* = MIN_SIZE*/) {
 			myMatrix.push_back (myLine);
 			for(int x (0); x < int (size); ++x){
 				Cube myCube ({x,y,z});
-				myLine.push_back(myCube);
+				if (isOnAFace(myCube, size))
+					myLine.push_back(myCube);
 			}
 		}
 	}
 }//Room
 
-/** display the position of every cube **/
-void Room::display() const { //doesn't work
+//doesn't work
+void Room::display() const {
 	for (CCubeMatrix matrix : myRoom){
 		for (CCubeLine line: matrix){
 			for (Cube cube : line){
