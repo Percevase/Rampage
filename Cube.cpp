@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Cube.h"
 
 using namespace std;
@@ -23,12 +24,21 @@ void Cube::moveUp() {
 
 void Cube::moveDown() {
 	--myPosition[1];
-}
+}//moveDown
+
+void Cube::display(){
+	cout << "x: " << this->getX()
+		 << " y: " << this->getY()
+		 << " z: " << this->getZ()
+		 << endl;
+}//display
 
 //doesn't work
-Cube::operator <<(ostream os) {
-	os << "x: " << this->getX()
-	   << " y: " << this->getY()
-	   << " z: " << this->getZ()
-	   << endl;
-}//moveDown
+/*
+ostream &operator <<(ostream & os, const Cube & cube) {
+	return os << "x: " << cube.getX()
+			  << " y: " << cube.getY()
+			  << " z: " << cube.getZ()
+			  << endl;
+}//operator << ()
+*/

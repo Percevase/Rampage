@@ -25,8 +25,10 @@ namespace nsGameStruct {
 		/** move the cube down of 1 unit on the y axis **/
 		void moveDown ();
 
-		/** to inject cubes in ofstreams **/
-		friend operator << (std::ofstream os, const Cube & cube);
+		/** to inject cubes in ostreams **/
+		//doesn't work at all
+		//friend std::ostream & operator << (std::ostream & os, const Cube & cube);
+		void display ();
 	};
 }//Cube
 

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Fighter.h"
 #include "Physics.h"
 
@@ -38,5 +39,5 @@ void Fighter::setSpeed(const double &speed) {
 
 void Fighter::jump() {
 	while ((myPositions[2] != 0) || (myPositions[2] != -1) || (myPositions[2] != 1))
-		myPositions[2] = freeFallEquation(myWeight, mySpeed);
+		myPositions[2] = freeFallEquation(mySpeed);
 }

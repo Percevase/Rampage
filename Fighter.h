@@ -31,6 +31,7 @@ namespace nsGameStruct {
 			void walk (const Direction & direction);
 			void run (const Direction & direction);
 			void jump ();
+			void move(const Direction &direction);
 	};
 }
 
